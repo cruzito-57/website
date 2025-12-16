@@ -1,0 +1,146 @@
+/* css/scratch.css — only used by scratch.html */
+
+/* FORCE pastel blue background on scratch page */
+
+html,
+body {
+  min-height: 100%;
+  background-color: #eaf4fb !important; /* light pastel blue */
+}
+
+/* Make sure main content doesn't override background */
+main {
+  background-color: transparent !important;
+}
+
+
+:root{
+  --bg:#eaf4fb;            /* pastel blue background */
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#64748b;
+  --accent:#0ea5e9;
+  --border:rgba(15,23,42,.12);
+  --shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* Push content below fixed navbar */
+main{
+  padding-top: 2.5rem;
+}
+
+/* Container width */
+.resume-container{
+  max-width: 1050px;
+}
+
+/* Page title */
+.scratch-header{
+  margin: 1.25rem 0 0.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Jump link */
+.jump-link{
+  display:inline-block;
+  margin: 0.25rem 0 1rem;
+  font-weight: 700;
+  text-decoration:none;
+  color:var(--accent);
+}
+.jump-link:hover{
+  text-decoration:underline;
+}
+
+/* Reusable “card” sections */
+.scratch-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  box-shadow:var(--shadow);
+  padding:1.25rem;
+  margin:1.25rem 0;
+}
+
+/* Tableau container polish */
+.tableauPlaceholder{
+  border-radius: 16px;
+  overflow:hidden;
+  border:1px solid var(--border);
+}
+
+/* Video section spacing */
+.video-block h3{
+  margin-bottom:0.75rem;
+}
+
+/* Course list layout */
+.course-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1rem;
+}
+
+@media (min-width: 900px){
+  .course-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+.course-list{
+  margin:0.5rem 0 0;
+  padding-left:1.25rem;
+}
+
+.course-list li{
+  margin:0.35rem 0;
+}
+
+.course-meta{
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+/* Optional image styling (if you add an image file in assets/) */
+.scratch-image{
+  width:100%;
+  max-height:360px;
+  object-fit:cover;
+  border-radius:18px;
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+  margin-top:0.75rem;
+}
+
+/* Top navigation link styling (scratch page only) */
+
+#mainNav .nav-link,
+#mainNav .navbar-brand {
+  text-decoration: none !important;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+#mainNav .nav-link:hover,
+#mainNav .navbar-brand:hover {
+  color: var(--accent);
+}
+
+/* Remove underline on all states */
+#mainNav a:link,
+#mainNav a:visited,
+#mainNav a:hover,
+#mainNav a:active {
+  text-decoration: none !important;
+}
+
+/* Slight spacing polish */
+#mainNav .nav-item {
+  margin-left: 0.75rem;
+}
